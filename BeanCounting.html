@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bean Counting</title>
+</head>
+<body>
+<script type="text/javascript">
+
+/*
+	Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase "B" characters are in the string.
+
+	Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted. Rewrite countBs to make use of this new function.
+*/
+
+	function countBs(n) {
+		return countChars(n, "B");
+	}
+
+	function countChars(n, char){
+		var count = 0;
+		for (var i = 0; i<n.length; i++){
+			if(n.charAt(i) === char){
+				count++;
+			}
+		}//for end
+		return count;
+	}	
+console.log(countBs("BBBBBBsbssjhh", "s"))
+console.log(countChars("BBBBBBsbssjhh", "s"))
+</script>
+</body>
+</html>
